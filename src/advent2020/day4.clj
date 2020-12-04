@@ -51,11 +51,5 @@
       "ecl" (sets/subset? #{v} (set '("amb" "blu" "brn" "gry" "grn" "hzl" "oth")))
       "pid" (and (util/is-numeric v) (== 9 (count v))))))
 
-(num-valid "resources/day4.txt" '("byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid") valid-1)
-(num-valid "resources/day4.txt" '("byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid") valid-2)
-
-
-
-(parse-key-vals (first (get-ID-list "resources/day4.txt")) {} '("byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid" "cid"))
-
-(apply + '(1 2))
+`(~(num-valid "resources/day4.txt" '("byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid") valid-1)
+  ~(num-valid "resources/day4.txt" '("byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid") valid-2))
