@@ -24,3 +24,9 @@
                             (<= 65 (int %) 70) 
                             (<= 97 (int %) 102))) 
                   str)))
+
+(defn max-list [l]
+  (reduce #(if (>= %1 %2) %1 %2) l))
+
+(defn min-list [l]
+  (reduce #(if (<= %1 %2) %1 %2) l))
