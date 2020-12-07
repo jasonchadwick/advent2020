@@ -30,3 +30,6 @@
 
 (defn min-list [l]
   (reduce #(if (<= %1 %2) %1 %2) l))
+
+(defn zip [a b]
+  (map vector a b))
