@@ -1,5 +1,4 @@
-(ns util
-  (:require [clojure.java.Character :as Character]))
+(ns util)
 
 (defmacro spy [& body]
   `(let [x# ~@body]
