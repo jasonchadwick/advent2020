@@ -35,3 +35,13 @@
 
 (defn subsequence [list start end]
   (drop start (take end list)))
+
+(defn fact [n]
+  (loop [n n k 1]
+    (if (zero? n) k
+        (recur (dec n) (* k n)))))
+
+(defn expt [x y]
+  (loop [y y k 1]
+    (if (zero? y) k
+        (recur (dec y) (* k x)))))
