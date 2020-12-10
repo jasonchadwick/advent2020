@@ -32,3 +32,6 @@
 
 (defn zip [a b]
   (map vector a b))
+
+(defn subsequence [list start end]
+  (drop start (take end list)))
