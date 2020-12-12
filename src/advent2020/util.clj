@@ -45,3 +45,29 @@
   (loop [y y k 1]
     (if (zero? y) k
         (recur (dec y) (* k x)))))
+
+(defn map-vec [f a]
+  (loop [i 0
+         b (vec (repeat (count a) (first a)))]
+    (if (>= i (count a))
+      b
+      (recur (inc i) (assoc b i (f (nth a i)))))))
+
+(defn deep-map [f a dims]
+  (if (== 1 dims)
+    (map f a)
+    (map #(deep-map f % (dec dims)) a)))
+
+(defn deep-map-vec [f a dims]
+  (if (== 1 dims)
+    (map-vec f a)
+    (map-vec #(deep-map f % (dec dims)) a)))
+
+(defn arr-ref [a dims]
+  (deep-map-vec atom a dims))
+
+(defn arr-deref [a dims]
+  (deep-map-vec deref a dims))
+
+(defn aref [arr r c]
+  (nth (nth arr r) c))
