@@ -1,4 +1,4 @@
-(ns util)
+(ns advent2020.util)
 
 (defmacro spy [& body]
   `(let [x# ~@body]

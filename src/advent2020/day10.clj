@@ -1,7 +1,7 @@
-(ns day10
+(ns advent2020.day10
   (:require [clojure.java.io :as io]
             [clojure.string :as string]
-            [util]))
+            [advent2020.util :as util]))
 
 (defn get-differences [list]
   (map #(- (nth list (inc %)) (nth list %)) (range (dec (count list)))))

@@ -1,6 +1,6 @@
-(ns day9
+(ns advent2020.day9
   (:require [clojure.java.io :as io]
-            [util]))
+            [advent2020.util :as util]))
 
 (defn get-num-list [fname]
   (vec (map #(Long/valueOf %) (line-seq (io/reader fname)))))

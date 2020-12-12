@@ -1,8 +1,8 @@
-(ns day4
+(ns advent2020.day4
   (:require [clojure.java.io :as io]
             [clojure.string :as string]
             [clojure.set :as sets]
-            [util]))
+            [advent2020.util :as util]))
 
 (defn get-ID-list [fname]
   (with-open [rdr (io/reader fname)]

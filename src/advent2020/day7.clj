@@ -1,7 +1,7 @@
-(ns day7
+(ns advent2020.day7
   (:require [clojure.java.io :as io]
             [clojure.string :as string]
-            [util]))
+            [advent2020.util :as util]))
 
 (defn bags-containing-bag [bag-list bag-seq cumulative-num]
   (if (empty? bag-seq) cumulative-num

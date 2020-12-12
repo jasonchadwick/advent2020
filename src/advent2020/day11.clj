@@ -1,6 +1,6 @@
-(ns day11
+(ns advent2020.day11
   (:require [clojure.java.io :as io]
-            [util]))
+            [advent2020.util :as util]))
 
 (defn chars-to-nums [c]
   (case c

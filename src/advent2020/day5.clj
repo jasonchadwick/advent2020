@@ -1,7 +1,7 @@
-(ns day5
+(ns advent2020.day5
   (:require [clojure.java.io :as io]
             [clojure.set]
-            [util]))
+            [advent2020.util :as util]))
 
 (defn get-row [str min max]
   (if (empty? str) min

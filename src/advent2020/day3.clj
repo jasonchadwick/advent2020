@@ -1,6 +1,5 @@
-(ns day3
-  (:require [clojure.java.io :as io]
-            [util]))
+(ns advent2020.day3
+  (:require [clojure.java.io :as io]))
 
 (defn load-map [fname]
   (with-open [rdr (io/reader fname)]

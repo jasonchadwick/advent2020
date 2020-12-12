@@ -1,7 +1,7 @@
-(ns day2
+(ns advent2020.day2
   (:require [clojure.java.io :as io]
             [clojure.string :as s]
-            [util]))
+            [advent2020.util :as util]))
 
 (defn char-count [char str]
   (count (re-seq (re-pattern char) str)))
